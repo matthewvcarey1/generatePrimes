@@ -28,4 +28,8 @@ If you are running windows you will need to type
 ```
 go build -o generatePrimes.exe cmd/generatePrimes/main.go
 ```
+You may need to run at least once to get it to compile
+```
+go mod tidy
+```
 On my 32GB Linux box the highest number that I can start with is 0x1000000000 or 2³⁶ or 68719476736 any larger and the program dies. It just uses a sieve of Eratosthenes that fills a bitarray with 1s or 0s depending if a number is prime. It walks the bitarray at the end to list just the prime numbers. It is reasonably quick.
